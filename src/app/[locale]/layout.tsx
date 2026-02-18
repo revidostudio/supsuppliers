@@ -7,6 +7,7 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
+import LayoutShell from "./LayoutShell";
 
 type Props = {
   children: React.ReactNode;
@@ -48,11 +49,14 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <AnnouncementBar />
-      <Header />
-      <main>{children}</main>
-      <Footer />
-      <WhatsAppButton />
+      <LayoutShell
+        announcementBar={<AnnouncementBar />}
+        header={<Header />}
+        footer={<Footer />}
+        whatsApp={<WhatsAppButton />}
+      >
+        {children}
+      </LayoutShell>
     </NextIntlClientProvider>
   );
 }

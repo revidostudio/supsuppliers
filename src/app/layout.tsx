@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { nunitoSans, ubuntu, saira, openSans } from "@/lib/fonts";
+import { nunitoSans, ubuntu, saira, openSans, barlowCondensed, inter } from "@/lib/fonts";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
@@ -58,6 +58,9 @@ const jsonLd = {
   ],
 };
 
+// jsonLd is a static constant — safe to serialize directly
+const jsonLdString = JSON.stringify(jsonLd);
+
 export default function RootLayout({
   children,
 }: {
@@ -65,12 +68,12 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${nunitoSans.variable} ${ubuntu.variable} ${saira.variable} ${openSans.variable}`}
+      className={`${nunitoSans.variable} ${ubuntu.variable} ${saira.variable} ${openSans.variable} ${barlowCondensed.variable} ${inter.variable}`}
     >
       <body className="font-body text-text-body bg-surface-primary antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdString }}
         />
         {children}
       </body>
