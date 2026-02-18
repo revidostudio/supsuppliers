@@ -12,9 +12,9 @@ export default function AnnouncementBar() {
   if (!visible) return null;
 
   return (
-    <div className="bg-accent text-text-on-accent relative">
-      <div className="container-site flex items-center justify-center py-2 px-8">
-        <p className="text-xs sm:text-sm font-accent tracking-wide text-center">
+    <div className="bg-[#5BCEE0] text-[#0a0a0a] relative">
+      <div className="container-site flex items-center justify-center py-2.5 px-8">
+        <p className="text-xs sm:text-sm font-body font-medium tracking-wide text-center">
           {isNl ? (
             <>
               Ontvang <strong className="font-semibold">gratis</strong> onze
@@ -29,7 +29,7 @@ export default function AnnouncementBar() {
         </p>
         <button
           onClick={() => setVisible(false)}
-          className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 p-1 text-text-on-accent/70 hover:text-text-on-accent transition-colors duration-200"
+          className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 p-1 text-[#0a0a0a]/50 hover:text-[#0a0a0a] transition-colors duration-200"
           aria-label="Close announcement"
         >
           <X size={14} />

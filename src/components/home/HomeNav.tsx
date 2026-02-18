@@ -39,7 +39,7 @@ export default function HomeNav() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-white/90 backdrop-blur-xl shadow-nav border-b border-[#e5e7eb]"
-          : "bg-transparent"
+          : "bg-white/60 backdrop-blur-sm border-b border-[#e5e7eb]/50"
       }`}
     >
       <div className="container-site flex items-center justify-between h-16 lg:h-20">

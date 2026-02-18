@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -11,6 +11,7 @@ export default function Header() {
   const locale = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const eigenMerkLinks = [
     { href: "/white-of-private-label" as const, label: t("whiteOfPrivateLabel") },
@@ -23,7 +24,12 @@ export default function Header() {
     { href: "/stappenplan" as const, label: t("stappenplan") },
   ];
 
-  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
@@ -36,21 +42,27 @@ export default function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="bg-surface-black text-text-on-dark sticky top-0 z-40">
+    <header
+      className={`sticky top-0 z-40 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgb(0_0_0/0.05)] border-b border-[#e5e7eb]"
+          : "bg-white border-b border-[#e5e7eb]"
+      }`}
+    >
       <div className="container-site flex items-center justify-between h-16 lg:h-[72px]">
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-heading font-black tracking-tight shrink-0"
+          className="font-display text-xl lg:text-2xl font-black tracking-tight uppercase shrink-0 text-[#0a0a0a]"
         >
-          Sup<span className="text-accent">suppliers</span>
+          Sup<span className="text-[#5BCEE0]">suppliers</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-accent">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-body font-medium">
           <Link
             href="/"
-            className="text-white/80 hover:text-accent transition-colors duration-200"
+            className="text-[#6b7280] hover:text-[#0a0a0a] transition-colors duration-200"
           >
             {t("home")}
           </Link>
@@ -61,7 +73,7 @@ export default function Header() {
             onMouseEnter={() => setActiveDropdown("products")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 text-white/80 hover:text-accent transition-colors duration-200">
+            <button className="flex items-center gap-1 text-[#6b7280] hover:text-[#0a0a0a] transition-colors duration-200">
               {t("products")}
               <ChevronDown
                 size={14}
@@ -77,16 +89,16 @@ export default function Header() {
                   : "opacity-0 -translate-y-1 pointer-events-none"
               }`}
             >
-              <div className="bg-surface-black/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl py-2 min-w-[220px]">
+              <div className="bg-white border border-[#e5e7eb] rounded-lg shadow-[0_8px_24px_rgb(0_0_0/0.08)] py-2 min-w-[220px]">
                 <Link
                   href="/white-of-private-label"
-                  className="block px-5 py-2.5 text-sm text-white/70 hover:text-accent hover:bg-white/5 transition-colors duration-150"
+                  className="block px-5 py-2.5 text-sm text-[#6b7280] hover:text-[#0a0a0a] hover:bg-[#f8f9fa] transition-colors duration-150"
                 >
                   {t("whiteLabel")}
                 </Link>
                 <Link
                   href="/producten-samples"
-                  className="block px-5 py-2.5 text-sm text-white/70 hover:text-accent hover:bg-white/5 transition-colors duration-150"
+                  className="block px-5 py-2.5 text-sm text-[#6b7280] hover:text-[#0a0a0a] hover:bg-[#f8f9fa] transition-colors duration-150"
                 >
                   {t("privateLabel")}
                 </Link>
@@ -100,7 +112,7 @@ export default function Header() {
             onMouseEnter={() => setActiveDropdown("eigen-merk")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 text-white/80 hover:text-accent transition-colors duration-200">
+            <button className="flex items-center gap-1 text-[#6b7280] hover:text-[#0a0a0a] transition-colors duration-200">
               {t("eigenMerk")}
               <ChevronDown
                 size={14}
@@ -116,12 +128,12 @@ export default function Header() {
                   : "opacity-0 -translate-y-1 pointer-events-none"
               }`}
             >
-              <div className="bg-surface-black/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl py-2 min-w-[260px]">
+              <div className="bg-white border border-[#e5e7eb] rounded-lg shadow-[0_8px_24px_rgb(0_0_0/0.08)] py-2 min-w-[260px]">
                 {eigenMerkLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block px-5 py-2.5 text-sm text-white/70 hover:text-accent hover:bg-white/5 transition-colors duration-150"
+                    className="block px-5 py-2.5 text-sm text-[#6b7280] hover:text-[#0a0a0a] hover:bg-[#f8f9fa] transition-colors duration-150"
                   >
                     {link.label}
                   </Link>
@@ -132,13 +144,13 @@ export default function Header() {
 
           <Link
             href="/bedrijf"
-            className="text-white/80 hover:text-accent transition-colors duration-200"
+            className="text-[#6b7280] hover:text-[#0a0a0a] transition-colors duration-200"
           >
             {t("bedrijf")}
           </Link>
           <Link
             href="/contact"
-            className="text-white/80 hover:text-accent transition-colors duration-200"
+            className="text-[#6b7280] hover:text-[#0a0a0a] transition-colors duration-200"
           >
             {t("contact")}
           </Link>
@@ -147,7 +159,7 @@ export default function Header() {
 
           <Link
             href="/offerte-aanvragen"
-            className="bg-accent text-text-on-accent px-6 py-2.5 rounded-lg font-medium hover:bg-accent-hover transition-colors duration-200"
+            className="bg-[#0a0a0a] text-white px-6 py-2.5 rounded-md font-semibold text-sm hover:bg-[#1a1a1a] transition-colors duration-200"
           >
             {t("offerte")}
           </Link>
@@ -158,7 +170,7 @@ export default function Header() {
           <LanguageSwitcher />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 text-white/80 hover:text-accent transition-colors duration-200"
+            className="p-2 text-[#0a0a0a] hover:text-[#5BCEE0] transition-colors duration-200"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -168,7 +180,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-surface-black/98 backdrop-blur-lg z-50 transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white/98 backdrop-blur-xl z-50 transition-all duration-300 ease-in-out ${
           mobileOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"
@@ -178,39 +190,39 @@ export default function Header() {
           <Link
             href="/"
             onClick={() => setMobileOpen(false)}
-            className="block py-3 text-white/80 hover:text-accent transition-colors duration-200 font-accent text-base"
+            className="block py-3 text-[#0a0a0a] hover:text-[#5BCEE0] transition-colors duration-200 font-body font-medium text-base"
           >
             {t("home")}
           </Link>
 
-          <div className="h-px bg-white/5 my-2" />
+          <div className="h-px bg-[#f0f0f0] my-2" />
 
           {/* Producten group */}
           <div className="py-3">
-            <p className="text-[11px] uppercase text-white/40 tracking-widest mb-3 font-accent">
+            <p className="text-[11px] uppercase text-[#9ca3af] tracking-widest mb-3 font-display font-bold">
               {t("products")}
             </p>
             <Link
               href="/white-of-private-label"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 pl-4 text-sm text-white/70 hover:text-accent transition-colors duration-200"
+              className="block py-2 pl-4 text-sm text-[#6b7280] hover:text-[#5BCEE0] transition-colors duration-200"
             >
               {t("whiteOfPrivateLabel")}
             </Link>
             <Link
               href="/producten-samples"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 pl-4 text-sm text-white/70 hover:text-accent transition-colors duration-200"
+              className="block py-2 pl-4 text-sm text-[#6b7280] hover:text-[#5BCEE0] transition-colors duration-200"
             >
               {t("productenSamples")}
             </Link>
           </div>
 
-          <div className="h-px bg-white/5 my-2" />
+          <div className="h-px bg-[#f0f0f0] my-2" />
 
           {/* Eigen merk group */}
           <div className="py-3">
-            <p className="text-[11px] uppercase text-white/40 tracking-widest mb-3 font-accent">
+            <p className="text-[11px] uppercase text-[#9ca3af] tracking-widest mb-3 font-display font-bold">
               {t("eigenMerk")}
             </p>
             {eigenMerkLinks.map((link) => (
@@ -218,26 +230,26 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block py-2 pl-4 text-sm text-white/70 hover:text-accent transition-colors duration-200"
+                className="block py-2 pl-4 text-sm text-[#6b7280] hover:text-[#5BCEE0] transition-colors duration-200"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          <div className="h-px bg-white/5 my-2" />
+          <div className="h-px bg-[#f0f0f0] my-2" />
 
           <Link
             href="/bedrijf"
             onClick={() => setMobileOpen(false)}
-            className="block py-3 text-white/80 hover:text-accent transition-colors duration-200 font-accent text-base"
+            className="block py-3 text-[#0a0a0a] hover:text-[#5BCEE0] transition-colors duration-200 font-body font-medium text-base"
           >
             {t("bedrijf")}
           </Link>
           <Link
             href="/contact"
             onClick={() => setMobileOpen(false)}
-            className="block py-3 text-white/80 hover:text-accent transition-colors duration-200 font-accent text-base"
+            className="block py-3 text-[#0a0a0a] hover:text-[#5BCEE0] transition-colors duration-200 font-body font-medium text-base"
           >
             {t("contact")}
           </Link>
@@ -246,7 +258,7 @@ export default function Header() {
             <Link
               href="/offerte-aanvragen"
               onClick={() => setMobileOpen(false)}
-              className="block bg-accent text-text-on-accent px-6 py-3.5 rounded-lg font-medium text-center hover:bg-accent-hover transition-colors duration-200"
+              className="block bg-[#0a0a0a] text-white px-6 py-3.5 rounded-md font-semibold text-center text-base hover:bg-[#1a1a1a] transition-colors duration-200"
             >
               {t("offerte")}
             </Link>

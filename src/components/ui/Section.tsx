@@ -9,10 +9,10 @@ type SectionProps = {
 };
 
 const bgMap = {
-  white: "bg-surface-primary",
-  gray: "bg-surface-secondary",
-  dark: "bg-surface-black text-text-on-dark",
-  accent: "bg-accent",
+  white: "bg-white",
+  gray: "bg-[#f8f9fa]",
+  dark: "bg-[#0a0a0a] text-white",
+  accent: "bg-[#5BCEE0]",
 } as const;
 
 const spacingMap = {

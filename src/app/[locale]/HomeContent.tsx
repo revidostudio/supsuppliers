@@ -1,5 +1,6 @@
 "use client";
 
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import HomeNav from "@/components/home/HomeNav";
 import Hero from "@/components/home/Hero";
 import TrustMarquee from "@/components/home/TrustMarquee";
@@ -12,6 +13,7 @@ import HomeFooter from "@/components/home/HomeFooter";
 export default function HomeContent() {
   return (
     <>
+      <AnnouncementBar />
       <HomeNav />
       <Hero />
       <TrustMarquee />
