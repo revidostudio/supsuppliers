@@ -180,7 +180,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white/98 backdrop-blur-xl z-50 transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white z-50 transition-all duration-300 ease-in-out ${
           mobileOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"

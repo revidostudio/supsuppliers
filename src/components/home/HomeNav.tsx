@@ -95,7 +95,7 @@ export default function HomeNav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white/98 backdrop-blur-xl z-40"
+            className="lg:hidden fixed inset-x-0 top-16 bottom-0 bg-white z-40"
           >
             <nav className="container-site py-10 flex flex-col gap-1">
               {navLinks.map((link) => (
