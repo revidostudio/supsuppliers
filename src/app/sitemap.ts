@@ -4,28 +4,25 @@ import { routing } from "@/i18n/routing";
 const BASE_URL = "https://supsuppliers.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = Object.entries(routing.pathnames);
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const [key, value] of paths) {
-    for (const locale of routing.locales) {
-      let pathname: string;
-      if (typeof value === "string") {
-        pathname = value;
-      } else {
-        pathname = value[locale];
-      }
+  for (const [, value] of Object.entries(routing.pathnames)) {
+    const nlPath = typeof value === "string" ? value : value.nl;
+    const enPath = typeof value === "string" ? value : value.en;
 
-      const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
-      const url = `${BASE_URL}${prefix}${pathname === "/" ? "" : pathname}`;
+    const nlUrl = `${BASE_URL}${nlPath === "/" ? "" : nlPath}`;
+    const enUrl = `${BASE_URL}/en${enPath === "/" ? "" : enPath}`;
 
-      entries.push({
-        url,
-        lastModified: new Date(),
-        changeFrequency: key === "/" ? "weekly" : "monthly",
-        priority: key === "/" ? 1.0 : key === "/offerte-aanvragen" ? 0.9 : 0.7,
-      });
-    }
+    entries.push({
+      url: nlUrl,
+      lastModified: new Date(),
+      alternates: {
+        languages: {
+          nl: nlUrl,
+          en: enUrl,
+        },
+      },
+    });
   }
 
   return entries;

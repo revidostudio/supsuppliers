@@ -37,14 +37,14 @@ const jsonLd = {
         "Nederlandse leverancier van poedervormige voeding en voedingssupplementen. White label & private label.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Asveldweg 7",
-        addressLocality: "Hengelo",
-        postalCode: "7556 BP",
+        streetAddress: "Geograaf 3",
+        addressLocality: "Duiven",
+        postalCode: "6921 EW",
         addressCountry: "NL",
       },
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+31-6-12345678",
+        telephone: "+31634568191",
         contactType: "sales",
         availableLanguage: ["Dutch", "English"],
       },
