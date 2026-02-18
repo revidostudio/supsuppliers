@@ -1,0 +1,247 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Producten",
+    "whiteLabel": "White label",
+    "privateLabel": "Private label",
+    "eigenMerk": "Eigen merk opzetten",
+    "whiteOfPrivateLabel": "White of Private label",
+    "productenSamples": "Producten & Samples",
+    "voedselveiligheidsplan": "Voedselveiligheidsplan",
+    "design": "Design",
+    "labels": "Labels",
+    "shakebekersDrinkflessen": "Shakebekers & drinkflessen",
+    "overigeInformatie": "Overige informatie",
+    "stappenplan": "Stappenplan",
+    "bedrijf": "Bedrijf",
+    "contact": "Contact",
+    "offerte": "Offerte aanvragen"
+  },
+  "footer": {
+    "brochureTitle": "Gratis digitale brochure ontvangen?",
+    "brochureSubtitle": "Ontvang onze brochure en ontdek alle mogelijkheden voor uw eigen merk.",
+    "brochureBtn": "Aanvragen",
+    "tagline": "Uw partner in supplementen & private label.",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mailadres",
+    "eigenMerk": "Eigen merk opzetten",
+    "contactTitle": "Contact",
+    "copyright": "Copyright",
+    "allRightsReserved": "Alle rechten voorbehouden.",
+    "terms": "Algemene voorwaarden",
+    "privacy": "Privacy verklaring"
+  },
+  "usps": {
+    "laagdrempeligContact": "Laagdrempelig contact",
+    "hoogwaardigeKwaliteit": "Hoogwaardige kwaliteit",
+    "korteLevertijden": "Korte levertijden",
+    "lageAfnames": "Lage afnames",
+    "productenOpMaat": "Producten op maat",
+    "ontzorgtAZ": "Ontzorgt van A tot Z"
+  },
+  "cta": {
+    "requestQuote": "Offerte aanvragen",
+    "requestBrochure": "Brochure aanvragen",
+    "contactUs": "Neem contact op",
+    "learnMore": "Meer informatie",
+    "moreAbout": "Meer over Supsuppliers",
+    "requestSample": "Vraag een sample aan",
+    "orderSamples": "Samples bestellen",
+    "viewAssortment": "Bekijk assortiment",
+    "viewDesign": "Bekijk design opties",
+    "viewLabels": "Bekijk labels",
+    "viewPricing": "Bekijk prijzen"
+  },
+  "announcement": "Ontvang {free} onze brochure en ontdek alle voordelen!",
+  "free": "gratis",
+  "language": "Taal",
+  "switchLocale": "English",
+
+  "whitePrivateLabel": {
+    "title": "White of Private label",
+    "subtitle": "Wat is het verschil?",
+    "intro": "Supsuppliers biedt zowel white label als private label oplossingen voor uw eigen merk. Maar wat is nu precies het verschil?",
+    "whiteTitle": "White label",
+    "whiteDesc": "Bij white label kiest u producten uit ons bestaande assortiment. Deze producten zijn direct beschikbaar vanuit voorraad en kunnen snel worden voorzien van uw eigen label. Ideaal voor een snelle start met lage minimale afname.",
+    "whiteBenefits": "Direct beschikbaar|Lage minimale afname|Snel op de markt|Beproefde recepturen",
+    "privateTitle": "Private label",
+    "privateDesc": "Bij private label ontwikkelen wij samen met u een uniek product op maat. U bepaalt de samenstelling, smaak en verpakking. Volledig afgestemd op uw wensen en doelgroep.",
+    "privateBenefits": "Unieke receptuur|Eigen samenstelling|Op maat gemaakt|Onderscheidend in de markt",
+    "ctaTitle": "Klaar om te starten?",
+    "ctaDesc": "Vraag vandaag nog een offerte aan en ontdek de mogelijkheden voor uw eigen merk."
+  },
+
+  "productenSamples": {
+    "title": "Producten & Samples",
+    "subtitle": "Ons assortiment",
+    "intro": "Supsuppliers beschikt over een uitgebreid assortiment poedervormige voeding en voedingssupplementen. Alle producten worden geproduceerd in onze FSSC22000 gecertificeerde productieomgeving.",
+    "qualityTitle": "Kwaliteit",
+    "qualityDesc": "Al onze producten worden geproduceerd volgens de hoogste kwaliteitsnormen. Onze productieomgeving is FSSC22000 gecertificeerd, wat garandeert dat wij voldoen aan de strengste eisen op het gebied van voedselveiligheid.",
+    "assortmentTitle": "Assortiment",
+    "assortmentDesc": "Ons assortiment omvat onder andere:",
+    "assortmentItems": "Wei-eiwitshakes|Maaltijdshakes|Pre-workouts|Post-workouts|BCAA's|Creatine|Plantaardige eiwitproducten|Weight-gainers|Vitaminen & mineralen",
+    "packagingTitle": "Verpakking",
+    "packagingDesc": "Wij bieden verschillende verpakkingsopties aan, waaronder potten, zakken (pouches) en sachets. De verpakking wordt volledig afgestemd op uw wensen.",
+    "samplesTitle": "Samples bestellen",
+    "samplesDesc": "Wilt u eerst proeven voordat u beslist? Bestel eenvoudig een samplepakket en test onze producten op smaak, textuur en kwaliteit."
+  },
+
+  "design": {
+    "title": "Design",
+    "subtitle": "Uw label ontwerp",
+    "intro": "Een professioneel label is het visitekaartje van uw merk. Supsuppliers biedt drie design pakketten aan, zodat er altijd een optie is die past bij uw budget en wensen.",
+    "basicTitle": "Basis",
+    "basicPrice": "€150",
+    "basicDesc": "Eenvoudig maar professioneel labeldesign op basis van uw logo en huisstijl.",
+    "basicFeatures": "1 ontwerp concept|2 revisierondes|Drukklaar bestand",
+    "standardTitle": "Standaard",
+    "standardPrice": "€300",
+    "standardDesc": "Uitgebreid labeldesign met meerdere concepten en meer revisierondes.",
+    "standardFeatures": "2 ontwerp concepten|4 revisierondes|Drukklaar bestand|Mockup presentatie",
+    "premiumTitle": "Premium",
+    "premiumPrice": "€500",
+    "premiumDesc": "Volledig op maat gemaakt design met uitgebreide ondersteuning.",
+    "premiumFeatures": "3 ontwerp concepten|Onbeperkte revisies|Drukklaar bestand|Mockup presentatie|Huisstijl advies",
+    "extraTitle": "Aanvullende diensten",
+    "extraDesc": "Naast labeldesign bieden wij ook aanvullende design diensten aan, zoals het ontwerpen van een logo, huisstijl, of verpakkingsdesign."
+  },
+
+  "labels": {
+    "title": "Labels",
+    "subtitle": "Professionele labels van Eshuis",
+    "intro": "Supsuppliers werkt samen met Eshuis, een toonaangevende drukkerij in Nederland, voor het drukken van uw labels. Dit garandeert een professionele uitstraling van uw producten.",
+    "partnerTitle": "Eshuis als partner",
+    "partnerDesc": "Eshuis is een ervaren drukkerij die al jarenlang labels van topkwaliteit levert. Door onze samenwerking kunnen wij scherpe prijzen bieden met snelle levertijden.",
+    "processTitle": "Het proces",
+    "processDesc": "Na goedkeuring van uw labeldesign wordt de druk in gang gezet. Eshuis levert de labels direct aan Supsuppliers, waar ze worden aangebracht op uw producten.",
+    "volumeTitle": "Volume voordeel",
+    "volumeDesc": "Bij hogere oplages gaat de kostprijs aanzienlijk omlaag en kan Supsuppliers uw labels voorradig houden en bij vervolgorders sneller uitleveren!",
+    "ctaPricing": "Klik hier voor actuele prijzen"
+  },
+
+  "shakebekers": {
+    "title": "Shakebekers & Drinkflessen",
+    "subtitle": "Met jouw logo",
+    "intro": "Geef jouw merk een extra boost door te kiezen voor bedrukte shakebekers en drinkflessen. Wij leveren hoge kwaliteit producten tegen een laag tarief met een snelle levertijd.",
+    "shakerTitle": "Shakebeker",
+    "shakerDesc": "Onze shakebekers zijn gemaakt van hoogwaardig BPA-vrij materiaal en beschikken over een praktisch zeefje voor klontvrije shakes. Verkrijgbaar in diverse kleuren en volledig te personaliseren met uw logo of design.",
+    "bottleTitle": "Drinkfles",
+    "bottleDesc": "Onze drinkflessen zijn gemaakt van duurzaam BPA-vrij tritan. We bieden scherpe prijzen en snelle levering voor gepersonaliseerde drinkflessen. Ideaal als aanvulling op uw supplementenlijn.",
+    "benefitsTitle": "Voordelen",
+    "benefits": "BPA-vrij materiaal|Hoge kwaliteit|Lage minimale afname|Snelle levertijden|Volledig personaliseerbaar|Diverse kleuren beschikbaar"
+  },
+
+  "voedselveiligheid": {
+    "title": "Voedselveiligheidsplan",
+    "subtitle": "FSSC22000 gecertificeerd",
+    "intro": "Supsuppliers hecht groot belang aan voedselveiligheid. Onze productieomgeving is FSSC22000 gecertificeerd, wat de hoogste standaard is op het gebied van voedselveiligheid.",
+    "whatTitle": "Wat is FSSC22000?",
+    "whatDesc": "FSSC22000 is een internationaal erkend certificeringssysteem voor voedselveiligheid. Het combineert ISO 22000 met aanvullende technische specificaties en zorgt ervoor dat de hele productieketen voldoet aan de strengste eisen.",
+    "whyTitle": "Waarom belangrijk?",
+    "whyDesc": "Met een FSSC22000 gecertificeerde leverancier weet u zeker dat uw producten worden geproduceerd onder de hoogste kwaliteits- en veiligheidsnormen. Dit geeft vertrouwen aan uw klanten en voldoet aan de eisen van retailers.",
+    "haccp": "HACCP conform",
+    "iso": "ISO 22000 gecertificeerd",
+    "fssc": "FSSC22000 gecertificeerd",
+    "traceability": "Volledige traceerbaarheid"
+  },
+
+  "overigeInfo": {
+    "title": "Overige informatie",
+    "subtitle": "Levering & transport",
+    "deliveryTitle": "Levertijden",
+    "deliveryDesc": "Supsuppliers streeft ernaar binnen 5 werkdagen uw bestelling te verzenden. Dit geldt echter pas nadat labels in bezit zijn van Supsuppliers. Wanneer producten niet op voorraad zijn zal u hierover worden geïnformeerd.",
+    "shippingTitle": "Transport & verzending",
+    "postnlTitle": "Verzending middels PostNL",
+    "postnlDesc": "Supsuppliers verzendt kleine orders middels PostNL. U ontvangt een track & trace in uw mail en kunt zo uw bestelling volgen. Wanneer u uw bestelling niet in ontvangst neemt zal deze worden teruggestuurd. Opnieuw gemaakte verzendkosten zullen in rekening worden gebracht.",
+    "transportTitle": "Transport",
+    "transportDesc": "Grotere orders worden verzonden d.m.v. een transportbedrijf. Er wordt een afleverdag overeengekomen en transport wordt ingepland. De koerier zal 30 minuten voor aankomst telefonisch contact met u opnemen.",
+    "pickupTitle": "Afhalen",
+    "pickupDesc": "U kunt zelf de producten op afspraak (laten) afhalen.",
+    "packingTitle": "Pakbonnen",
+    "packingDesc": "Bij iedere verzending zal op een pakbon worden weergegeven wat er wordt geleverd. U zult deze pakbon ook dienen te tekenen (geldt niet bij PostNL). Bewaar uw pakbon goed in uw administratie."
+  },
+
+  "stappenplan": {
+    "title": "Stappenplan",
+    "subtitle": "In 8 stappen uw eigen merk",
+    "step1Title": "Samples bestellen",
+    "step1Desc": "Supsuppliers adviseert u allereerst samples te bestellen via onze website. U krijgt een pakket samples toegezonden en kunt de producten testen op smaak, werking etc.",
+    "step2Title": "Productkeuze",
+    "step2Desc": "Na het testen van de samples maakt u een keuze uit ons productaanbod (producten en aantallen).",
+    "step3Title": "Labeldesign keuze",
+    "step3Desc": "U maakt een keuze op het gebied van design.",
+    "step4Title": "Druk",
+    "step4Desc": "Het drukken van labels.",
+    "step5Title": "Offerte",
+    "step5Desc": "Wanneer u een keuze heeft gemaakt uit bovenstaande kunt u een offerte aanvragen via de website.",
+    "step6Title": "Contactmoment",
+    "step6Desc": "Vanuit Supsuppliers wordt contact met u opgenomen aan de hand van uw offerte. U ontvangt van Supsuppliers een offerte per mail.",
+    "step7Title": "Productie",
+    "step7Desc": "Na akkoord op de offerte wordt het proces betreft uw keuzes in gang gezet. U ontvangt een factuur in uw mail. Zodra dit is voldaan zetten we de bestelling direct in gang.",
+    "step8Title": "Levering",
+    "step8Desc": "Wanneer uw bestelling gereed is voor verzending ontvangt u een Track and trace waarmee u de bestelling live kunt volgen."
+  },
+
+  "bedrijf": {
+    "title": "Bedrijf",
+    "subtitle": "Over Supsuppliers",
+    "intro": "Supsuppliers is de Nederlandse leverancier van poedervormige voeding en voedingssupplementen. Gevestigd in Duiven, staan wij aan de basis van de ontwikkeling, productie en verpakking van uw eigen supplementenlijn.",
+    "missionTitle": "Onze missie",
+    "missionDesc": "Wij maken het voor iedereen mogelijk om een eigen supplementenmerk te starten. Met lage minimale afnames, hoogwaardige kwaliteit en persoonlijke begeleiding van A tot Z.",
+    "whatWeDoTitle": "Wat wij doen",
+    "whatWeDoDesc": "Supsuppliers biedt de mogelijkheid tot het realiseren van een private-label en staat aan de basis van de ontwikkeling, productie en verpakking van o.a: Wei-eiwitshakes, maaltijdshakes, pre-workouts, post-workouts, BCAA's, creatine, plantaardige eiwitproducten, weight-gainers en meer.",
+    "whyTitle": "Waarom Supsuppliers?",
+    "whyItems": "FSSC22000 gecertificeerde productie|Lage minimale afnames|Snelle levertijden|Persoonlijke begeleiding|Alles onder één dak|Concurrerende prijzen"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Neem contact met ons op",
+    "intro": "Heeft u vragen of wilt u meer informatie? Neem gerust contact met ons op. Wij staan u graag te woord.",
+    "formTitle": "Stuur ons een bericht",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mailadres",
+    "phone": "Telefoonnummer",
+    "company": "Bedrijfsnaam",
+    "subject": "Onderwerp",
+    "message": "Uw bericht",
+    "send": "Versturen",
+    "infoTitle": "Contactgegevens",
+    "visitTitle": "Bezoekadres"
+  },
+
+  "offerte": {
+    "title": "Offerte aanvragen",
+    "subtitle": "Vraag vrijblijvend een offerte aan",
+    "intro": "Vul onderstaand formulier in en wij nemen zo spoedig mogelijk contact met u op met een passende offerte.",
+    "personalTitle": "Persoonlijke gegevens",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mailadres",
+    "phone": "Telefoonnummer",
+    "company": "Bedrijfsnaam",
+    "productTitle": "Product informatie",
+    "productType": "Type product",
+    "productTypes": "Wei-eiwitshake|Maaltijdshake|Pre-workout|Post-workout|BCAA|Creatine|Plantaardig eiwit|Weight-gainer|Anders",
+    "labelType": "Label type",
+    "labelTypes": "White label|Private label",
+    "quantity": "Gewenste afname",
+    "remarks": "Opmerkingen",
+    "send": "Offerte aanvragen",
+    "disclaimer": "Na het indienen van uw aanvraag nemen wij binnen 2 werkdagen contact met u op."
+  },
+
+  "voorwaarden": {
+    "title": "Algemene voorwaarden",
+    "subtitle": "Supsuppliers B.V.",
+    "lastUpdated": "Laatst bijgewerkt: januari 2024"
+  },
+
+  "privacybeleid": {
+    "title": "Privacybeleid",
+    "subtitle": "Supsuppliers B.V.",
+    "lastUpdated": "Laatst bijgewerkt: januari 2024"
+  }
+}
