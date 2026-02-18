@@ -22,7 +22,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={handleSwitch}
-      className="flex items-center gap-1.5 text-xs font-accent font-medium border border-white/15 px-3 py-1.5 rounded-md text-white/70 hover:border-accent hover:text-accent transition-colors duration-200"
+      className="flex items-center gap-1.5 text-xs font-body font-medium border border-[#e5e7eb] px-3 py-1.5 rounded-md text-[#6b7280] hover:border-[#5BCEE0] hover:text-[#5BCEE0] transition-colors duration-200"
       aria-label={`Switch to ${otherLocale === "nl" ? "Dutch" : "English"}`}
     >
       <Globe size={13} />

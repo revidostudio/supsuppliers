@@ -36,10 +36,10 @@ export default function HomeNav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-xl shadow-nav border-b border-[#e5e7eb]"
-          : "bg-white/60 backdrop-blur-sm border-b border-[#e5e7eb]/50"
+          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgb(0_0_0/0.05)] border-b border-[#e5e7eb]"
+          : "bg-white border-b border-[#e5e7eb]/50"
       }`}
     >
       <div className="container-site flex items-center justify-between h-16 lg:h-20">
