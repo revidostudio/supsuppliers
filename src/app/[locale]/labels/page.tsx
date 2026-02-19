@@ -45,7 +45,7 @@ function LabelsContent() {
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
             <div className="bg-surface-secondary rounded-2xl p-12 flex items-center justify-center">
-              <p className="text-h1 font-heading font-black text-text-muted/30">
+              <p className="text-h1 font-display font-black text-text-muted/30 uppercase">
                 Eshuis
               </p>
             </div>

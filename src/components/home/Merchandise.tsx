@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const cards = {
   nl: [
@@ -12,11 +13,13 @@ const cards = {
       title: "SHAKEBEKER",
       subtitle: "met jouw logo",
       desc: "BPA-vrij, diverse kleuren, volledig personaliseerbaar. Lage afname, snelle levering.",
+      image: "/images/products/group-products-3.png",
     },
     {
       title: "DRINKFLES",
       subtitle: "met jouw logo",
       desc: "Duurzaam tritan materiaal. Scherpe prijzen voor gepersonaliseerde drinkflessen.",
+      image: "/images/products/group-products-2.png",
     },
   ],
   en: [
@@ -24,11 +27,13 @@ const cards = {
       title: "SHAKER CUP",
       subtitle: "with your logo",
       desc: "BPA-free, various colors, fully customizable. Low minimum orders, fast delivery.",
+      image: "/images/products/group-products-3.png",
     },
     {
       title: "DRINK BOTTLE",
       subtitle: "with your logo",
       desc: "Durable tritan material. Competitive prices for personalized drink bottles.",
+      image: "/images/products/group-products-2.png",
     },
   ],
 };
@@ -69,11 +74,15 @@ export default function Merchandise() {
                 href="/shakebekers-drinkflessen"
                 className="group block bg-[#f8f9fa] border border-[#e5e7eb] rounded-xl p-8 lg:p-10 transition-all duration-500 hover:shadow-glow hover:border-[#5BCEE0]/30 hover:-translate-y-1"
               >
-                {/* Placeholder image area */}
-                <div className="w-full h-48 lg:h-56 bg-[#e5e7eb]/50 rounded-lg mb-8 flex items-center justify-center overflow-hidden">
-                  <span className="font-display font-black text-6xl text-[#0a0a0a]/[0.06] select-none group-hover:scale-105 transition-transform duration-500">
-                    {card.title === "SHAKEBEKER" || card.title === "SHAKER CUP" ? "🥤" : "🍶"}
-                  </span>
+                {/* Product image */}
+                <div className="relative w-full h-48 lg:h-56 bg-[#f0f1f3] rounded-lg mb-8 overflow-hidden p-4 lg:p-6">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
                 <h3 className="font-display font-black text-h3 uppercase text-[#0a0a0a] mb-1">

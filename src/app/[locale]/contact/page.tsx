@@ -34,7 +34,7 @@ function ContactContent() {
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
           {/* Form */}
           <FadeIn className="lg:col-span-3">
-            <h2 className="font-heading font-black text-h3 text-text-primary mb-8">
+            <h2 className="font-display font-black text-h3 text-text-primary mb-8 uppercase">
               {t("formTitle")}
             </h2>
             <div className="space-y-4">
@@ -51,7 +51,7 @@ function ContactContent() {
               <TextAreaField label={t("message")} rows={5} />
               <button
                 type="button"
-                className="bg-accent text-text-on-accent px-8 py-3 rounded-lg font-accent font-medium hover:bg-accent-hover transition-colors"
+                className="w-full sm:w-auto bg-accent text-text-on-accent px-8 py-3 rounded-lg font-body font-medium hover:bg-accent-hover transition-colors"
               >
                 {t("send")}
               </button>
@@ -60,14 +60,14 @@ function ContactContent() {
 
           {/* Contact Info */}
           <FadeIn delay={0.15} className="lg:col-span-2">
-            <h2 className="font-heading font-black text-h3 text-text-primary mb-8">
+            <h2 className="font-display font-black text-h3 text-text-primary mb-8 uppercase">
               {t("infoTitle")}
             </h2>
             <div className="space-y-6">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <h3 className="font-accent font-medium text-text-primary mb-1">
+                  <h3 className="font-body font-medium text-text-primary mb-1">
                     {t("visitTitle")}
                   </h3>
                   <p className="text-text-body text-sm">{COMPANY.address}</p>
@@ -76,7 +76,7 @@ function ContactContent() {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <h3 className="font-accent font-medium text-text-primary mb-1">
+                  <h3 className="font-body font-medium text-text-primary mb-1">
                     E-mail
                   </h3>
                   <a
@@ -90,7 +90,7 @@ function ContactContent() {
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <h3 className="font-accent font-medium text-text-primary mb-1">
+                  <h3 className="font-body font-medium text-text-primary mb-1">
                     {t("phone")}
                   </h3>
                   <a
@@ -104,7 +104,7 @@ function ContactContent() {
               <div className="flex items-start gap-3">
                 <Building2 className="w-5 h-5 text-accent mt-0.5 shrink-0" />
                 <div>
-                  <h3 className="font-accent font-medium text-text-primary mb-1">
+                  <h3 className="font-body font-medium text-text-primary mb-1">
                     KVK
                   </h3>
                   <p className="text-text-body text-sm">{COMPANY.kvk}</p>
@@ -115,7 +115,7 @@ function ContactContent() {
                   href={COMPANY.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-accent font-medium hover:bg-[#20bd5a] transition-colors"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-body font-medium hover:bg-[#20bd5a] transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp

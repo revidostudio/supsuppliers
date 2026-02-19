@@ -73,10 +73,10 @@ function DesignContent() {
                     : "bg-surface-secondary text-text-primary"
                 }`}
               >
-                <h3 className="font-heading font-bold text-h4 mb-2">
+                <h3 className="font-display font-bold text-h4 mb-2 uppercase">
                   {tier.title}
                 </h3>
-                <p className="text-h1 font-heading font-black text-accent mb-4">
+                <p className="text-h1 font-display font-black text-accent mb-4">
                   {tier.price}
                 </p>
                 <p
@@ -107,7 +107,7 @@ function DesignContent() {
                 </ul>
                 <Link
                   href="/offerte-aanvragen"
-                  className={`block text-center px-6 py-3 rounded-lg font-accent font-medium transition-colors ${
+                  className={`block text-center px-6 py-3 rounded-lg font-body font-medium transition-colors ${
                     tier.highlight
                       ? "bg-accent text-black hover:bg-accent-hover"
                       : "border-2 border-text-primary text-text-primary hover:bg-text-primary hover:text-text-on-dark"

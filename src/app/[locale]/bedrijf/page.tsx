@@ -38,15 +38,15 @@ function BedrijfContent() {
       <Section bg="white" spacing="lg">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           <FadeIn>
-            <h2 className="font-heading font-black text-h2 text-text-primary mb-4">
+            <h2 className="font-display font-black text-h2 uppercase text-[#0a0a0a] mb-4">
               {t("missionTitle")}
             </h2>
-            <p className="text-text-body leading-relaxed text-lg">
+            <p className="font-body text-text-body leading-relaxed text-lg">
               {t("missionDesc")}
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>
-            <h2 className="font-heading font-black text-h2 text-text-primary mb-4">
+            <h2 className="font-display font-black text-h2 uppercase text-[#0a0a0a] mb-4">
               {t("whatWeDoTitle")}
             </h2>
             <p className="text-text-body leading-relaxed text-lg">
@@ -66,7 +66,7 @@ function BedrijfContent() {
                 <span className="w-10 h-10 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
                   <Check className="w-5 h-5 text-text-on-accent" strokeWidth={3} />
                 </span>
-                <p className="font-accent font-medium text-sm text-text-primary">
+                <p className="font-body font-medium text-sm text-text-primary">
                   {item}
                 </p>
               </div>

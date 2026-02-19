@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   const locale = useLocale();
@@ -23,27 +24,55 @@ export default function About() {
 
       <div className="container-site relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Left — decorative stacked text */}
+          {/* Left — product image with decorative accent */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="hidden lg:block"
-            aria-hidden="true"
+            className="hidden lg:flex items-center justify-center"
           >
-            <div className="font-display font-black text-[6vw] leading-[0.85] uppercase select-none">
-              {["SUP", "SUP", "PLI", "ERS"].map((word, i) => (
-                <span
-                  key={i}
-                  className="block"
-                  style={{
-                    WebkitTextStroke: "2px rgba(91, 206, 224, 0.15)",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  {word}
-                </span>
-              ))}
+            <div className="relative w-full max-w-[520px] mx-auto">
+              {/* Decorative turquoise accent rectangle behind the image */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.15 }}
+                className="absolute -bottom-6 -left-6 w-3/4 h-3/4 rounded-2xl bg-[#5BCEE0]/10 border border-[#5BCEE0]/20"
+                aria-hidden="true"
+              />
+              {/* Small decorative circle accent */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-[#5BCEE0]/15"
+                aria-hidden="true"
+              />
+              {/* Product image with subtle float animation */}
+              <motion.div
+                animate={inView ? { y: [0, -8, 0] } : {}}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+                className="relative z-10"
+              >
+                <Image
+                  src="/images/products/white-label.png"
+                  alt={
+                    isNl
+                      ? "Supsuppliers whey isolaat producten — chocolade & vanille"
+                      : "Supsuppliers whey isolate products — chocolate & vanilla"
+                  }
+                  width={1024}
+                  height={934}
+                  className="w-full h-auto object-contain drop-shadow-xl"
+                  sizes="(max-width: 1024px) 0px, 50vw"
+                  priority={false}
+                />
+              </motion.div>
             </div>
           </motion.div>
 
@@ -76,7 +105,7 @@ export default function About() {
             <div className="mt-10">
               <Link
                 href="/bedrijf"
-                className="group inline-flex items-center gap-2 bg-[#0a0a0a] text-white px-8 py-4 rounded-md font-body font-semibold text-base hover:bg-[#1a1a1a] transition-all duration-300"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0a0a0a] text-white px-8 py-4 rounded-md font-body font-semibold text-base hover:bg-[#1a1a1a] transition-all duration-300"
               >
                 {isNl ? "Meer over ons" : "More about us"}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

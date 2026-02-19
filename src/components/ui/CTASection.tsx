@@ -25,7 +25,7 @@ export default function CTASection({
       <div className="container-site text-center">
         <FadeIn>
           <h2
-            className={`font-heading font-black text-h2 lg:text-h1 mb-4 ${
+            className={`font-display font-black text-h2 lg:text-h1 uppercase mb-4 ${
               isDark ? "text-white" : "text-black"
             }`}
           >
@@ -42,7 +42,7 @@ export default function CTASection({
           )}
           <Link
             href={href}
-            className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-accent font-medium text-base transition-all hover:gap-3 ${
+            className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md font-body font-semibold text-base transition-all hover:gap-3 ${
               isDark
                 ? "bg-accent text-black hover:bg-accent-hover"
                 : "bg-black text-white hover:bg-surface-dark"

@@ -33,7 +33,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 1 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 1 — Definities
             </h2>
             <p className="text-text-body leading-relaxed mb-4">
@@ -59,7 +59,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 2 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 2 — Toepasselijkheid
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -74,7 +74,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 3 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 3 — Offertes en aanbiedingen
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -88,7 +88,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 4 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 4 — Levering
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -102,7 +102,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 5 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 5 — Betaling
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -116,7 +116,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 6 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 6 — Aansprakelijkheid
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -130,7 +130,7 @@ function VoorwaardenContent() {
 
           {/* Artikel 7 */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               Artikel 7 — Toepasselijk recht
             </h2>
             <p className="text-text-body leading-relaxed">

@@ -59,7 +59,7 @@ function ShakebekersContent() {
               <div className="bg-surface-secondary rounded-2xl aspect-square flex items-center justify-center mb-8">
                 <product.icon className="w-20 h-20 text-accent" strokeWidth={1.5} />
               </div>
-              <h2 className="font-heading font-black text-h2 text-text-primary mb-4">
+              <h2 className="font-display font-black text-h2 text-text-primary mb-4 uppercase">
                 {product.title}
               </h2>
               <p className="text-text-body leading-relaxed mb-6">
@@ -67,7 +67,7 @@ function ShakebekersContent() {
               </p>
               <Link
                 href="/offerte-aanvragen"
-                className="inline-flex items-center gap-2 bg-accent text-black px-8 py-3 rounded-lg font-accent font-medium hover:bg-accent-hover transition-all hover:gap-3"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-black px-8 py-3 rounded-lg font-body font-medium hover:bg-accent-hover transition-all hover:gap-3"
               >
                 {cta("requestSample")}
                 <ArrowRight className="w-4 h-4" />
@@ -92,7 +92,7 @@ function ShakebekersContent() {
                   <span className="w-8 h-8 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
                     <Check className="w-4 h-4 text-black" strokeWidth={3} />
                   </span>
-                  <p className="font-accent font-medium text-sm text-text-primary">
+                  <p className="font-body font-medium text-sm text-text-primary">
                     {benefit}
                   </p>
                 </div>
