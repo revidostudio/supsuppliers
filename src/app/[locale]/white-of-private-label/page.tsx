@@ -47,7 +47,7 @@ function WhitePrivateLabelContent() {
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                 <Package className="w-5 h-5 text-accent" strokeWidth={1.5} />
               </div>
-              <h2 className="font-heading font-black text-h2 text-text-primary mb-4">
+              <h2 className="font-display font-black text-h2 text-text-primary mb-4 uppercase">
                 {t("whiteTitle")}
               </h2>
               <p className="text-text-body leading-relaxed mb-6">
@@ -63,7 +63,7 @@ function WhitePrivateLabelContent() {
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                 <Tag className="w-5 h-5 text-accent" strokeWidth={1.5} />
               </div>
-              <h2 className="font-heading font-black text-h2 text-text-primary mb-4">
+              <h2 className="font-display font-black text-h2 text-text-primary mb-4 uppercase">
                 {t("privateTitle")}
               </h2>
               <p className="text-text-body leading-relaxed mb-6">

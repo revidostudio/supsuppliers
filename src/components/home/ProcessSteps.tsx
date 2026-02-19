@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const stepsNl = [
   {
@@ -13,6 +14,7 @@ const stepsNl = [
     desc: "Proef voordat u beslist. Bestel ons samplepakket en test smaak, textuur en kwaliteit van onze supplementen. Zo weet u precies wat u aan uw klanten aanbiedt.",
     cta: "Bekijk samples",
     href: "/producten-samples" as const,
+    image: "/images/products/verpakking.png",
   },
   {
     num: "02",
@@ -20,6 +22,7 @@ const stepsNl = [
     desc: "Kies uit ons uitgebreide assortiment: whey protein, pre-workout, creatine, plantaardige eiwitten en meer. White label of private label — u bepaalt.",
     cta: "Bekijk producten",
     href: "/producten-samples" as const,
+    image: "/images/products/group-products-1.png",
   },
   {
     num: "03",
@@ -27,6 +30,7 @@ const stepsNl = [
     desc: "Uw merk verdient een professionele uitstraling. Kies uit drie designpakketten of lever uw eigen artwork aan. Wij zorgen voor drukklare bestanden.",
     cta: "Design opties",
     href: "/design" as const,
+    image: "/images/products/private-label.png",
   },
   {
     num: "04",
@@ -34,6 +38,7 @@ const stepsNl = [
     desc: "Ontvang een offerte op maat. Transparante prijzen, geen verborgen kosten. Binnen twee werkdagen nemen wij contact op met een passend voorstel.",
     cta: "Offerte aanvragen",
     href: "/offerte-aanvragen" as const,
+    image: "/images/products/brochure-mockup.png",
   },
   {
     num: "05",
@@ -41,6 +46,7 @@ const stepsNl = [
     desc: "Productie, verpakking en verzending — alles onder één dak. Via PostNL of transport, inclusief track & trace. Uw supplementlijn, klaar voor de markt.",
     cta: "Meer over levering",
     href: "/overige-informatie" as const,
+    image: "/images/logos/postnl.png",
   },
 ];
 
@@ -51,6 +57,7 @@ const stepsEn = [
     desc: "Taste before you commit. Order our sample package and test the flavor, texture, and quality of our supplements. Know exactly what you offer your customers.",
     cta: "View samples",
     href: "/producten-samples" as const,
+    image: "/images/products/verpakking.png",
   },
   {
     num: "02",
@@ -58,6 +65,7 @@ const stepsEn = [
     desc: "Choose from our extensive range: whey protein, pre-workout, creatine, plant-based proteins, and more. White label or private label — you decide.",
     cta: "View products",
     href: "/producten-samples" as const,
+    image: "/images/products/group-products-1.png",
   },
   {
     num: "03",
@@ -65,6 +73,7 @@ const stepsEn = [
     desc: "Your brand deserves a professional look. Choose from three design packages or supply your own artwork. We handle print-ready files.",
     cta: "Design options",
     href: "/design" as const,
+    image: "/images/products/private-label.png",
   },
   {
     num: "04",
@@ -72,6 +81,7 @@ const stepsEn = [
     desc: "Receive a tailored quote. Transparent pricing, no hidden costs. Within two business days, we'll contact you with a fitting proposal.",
     cta: "Request quote",
     href: "/offerte-aanvragen" as const,
+    image: "/images/products/brochure-mockup.png",
   },
   {
     num: "05",
@@ -79,6 +89,7 @@ const stepsEn = [
     desc: "Production, packaging, and shipping — all under one roof. Via PostNL or transport, including track & trace. Your supplement line, ready for market.",
     cta: "More about delivery",
     href: "/overige-informatie" as const,
+    image: "/images/logos/postnl.png",
   },
 ];
 
@@ -145,22 +156,76 @@ export default function ProcessSteps() {
 
       {/* Step content */}
       <div className="container-site">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left — large number */}
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="relative"
-          >
-            <span
-              className="font-display font-black text-[20vw] lg:text-[14vw] leading-none text-[#0a0a0a]/[0.04] select-none block"
-              aria-hidden="true"
+        {/* Mobile image — shown above content on small screens */}
+        <div className="lg:hidden mb-8">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`mobile-img-${active}`}
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="relative w-full flex items-center justify-center"
+              style={{ height: "200px" }}
             >
-              {steps[active].num}
-            </span>
-          </motion.div>
+              {/* Subtle background glow */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-40 h-40 rounded-full bg-[#5BCEE0]/[0.06] blur-3xl" />
+              </div>
+              <Image
+                src={steps[active].image}
+                alt={steps[active].title}
+                width={280}
+                height={200}
+                className="object-contain relative z-10 drop-shadow-lg"
+                style={{ maxHeight: "180px", width: "auto" }}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left — large number with product image */}
+          <div className="relative hidden lg:block" style={{ minHeight: "340px" }}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`visual-${active}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35 }}
+                className="relative w-full h-full"
+              >
+                {/* Giant ghosted step number */}
+                <span
+                  className="font-display font-black text-[14vw] leading-none text-[#0a0a0a]/[0.04] select-none block"
+                  aria-hidden="true"
+                >
+                  {steps[active].num}
+                </span>
+
+                {/* Product image overlapping the number */}
+                <motion.div
+                  initial={{ opacity: 0, y: 16, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                  className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                >
+                  {/* Soft radial glow behind image */}
+                  <div className="absolute w-64 h-64 rounded-full bg-[#5BCEE0]/[0.07] blur-3xl" />
+                  <Image
+                    src={steps[active].image}
+                    alt={steps[active].title}
+                    width={400}
+                    height={340}
+                    className="object-contain relative z-10 drop-shadow-xl"
+                    style={{ maxHeight: "300px", width: "auto" }}
+                    priority
+                  />
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
           {/* Right — content */}
           <motion.div

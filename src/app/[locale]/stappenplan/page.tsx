@@ -69,7 +69,7 @@ function StappenplanContent() {
                   )}
 
                   {/* Numbered accent circle */}
-                  <div className="w-12 h-12 bg-accent text-black rounded-full flex items-center justify-center font-heading font-black text-base shrink-0 relative z-10">
+                  <div className="w-12 h-12 bg-accent text-black rounded-full flex items-center justify-center font-display font-black text-base shrink-0 relative z-10">
                     {i + 1}
                   </div>
 
@@ -77,7 +77,7 @@ function StappenplanContent() {
                   <div className="pt-0.5">
                     <div className="flex items-center gap-3 mb-2">
                       <Icon className="w-5 h-5 text-accent shrink-0" strokeWidth={1.5} />
-                      <h3 className="font-heading font-bold text-lg text-text-primary">
+                      <h3 className="font-display font-bold text-lg text-text-primary uppercase">
                         {step.title}
                       </h3>
                     </div>

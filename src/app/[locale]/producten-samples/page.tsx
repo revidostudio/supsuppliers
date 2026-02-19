@@ -58,7 +58,7 @@ function ProductenSamplesContent() {
             .map((item) => (
               <StaggerItem key={item}>
                 <div className="bg-surface-primary rounded-xl p-5 border border-border hover:border-accent/30 hover:-translate-y-0.5 transition-all">
-                  <p className="font-accent font-medium text-text-primary">
+                  <p className="font-body font-medium text-text-primary">
                     {item}
                   </p>
                 </div>

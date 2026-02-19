@@ -62,7 +62,7 @@ export default function Footer() {
                 />
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center gap-2 bg-[#0a0a0a] text-white px-8 py-3 rounded-md font-body font-semibold text-sm hover:bg-[#1a1a1a] transition-colors whitespace-nowrap"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0a0a0a] text-white px-8 py-3 rounded-md font-body font-semibold text-sm hover:bg-[#1a1a1a] transition-colors whitespace-nowrap"
                 >
                   {t("footer.brochureBtn")}
                   <ArrowRight className="w-4 h-4" />

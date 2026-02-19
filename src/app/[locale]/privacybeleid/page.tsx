@@ -33,7 +33,7 @@ function PrivacybeleidContent() {
 
           {/* 1. Verantwoordelijke */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               1. Verantwoordelijke
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -47,7 +47,7 @@ function PrivacybeleidContent() {
 
           {/* 2. Persoonsgegevens */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               2. Persoonsgegevens die wij verwerken
             </h2>
             <p className="text-text-body leading-relaxed mb-4">
@@ -69,7 +69,7 @@ function PrivacybeleidContent() {
 
           {/* 3. Doel */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               3. Doel van de gegevensverwerking
             </h2>
             <p className="text-text-body leading-relaxed mb-4">
@@ -89,7 +89,7 @@ function PrivacybeleidContent() {
 
           {/* 4. Bewaartermijn */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               4. Bewaartermijn
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -103,7 +103,7 @@ function PrivacybeleidContent() {
 
           {/* 5. Delen met derden */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               5. Delen met derden
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -117,7 +117,7 @@ function PrivacybeleidContent() {
 
           {/* 6. Cookies */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               6. Cookies
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -130,7 +130,7 @@ function PrivacybeleidContent() {
 
           {/* 7. Uw rechten */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               7. Uw rechten
             </h2>
             <p className="text-text-body leading-relaxed">
@@ -144,7 +144,7 @@ function PrivacybeleidContent() {
 
           {/* 8. Contact */}
           <article>
-            <h2 className="font-heading font-bold text-xl text-text-primary mb-4">
+            <h2 className="font-display font-bold text-xl text-text-primary mb-4 uppercase">
               8. Contact
             </h2>
             <p className="text-text-body leading-relaxed">
